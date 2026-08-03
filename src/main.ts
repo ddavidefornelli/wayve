@@ -7,3 +7,7 @@ import "./components/contact/wayve-contact-cta";
 import "./components/contact/wayve-email-form";
 import "./components/links/wayve-links";
 import "./components/about/wayve-about";
+
+// Vercel Web Analytics
+import { inject } from "@vercel/analytics";
+inject();
