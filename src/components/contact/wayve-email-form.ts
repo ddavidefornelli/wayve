@@ -1,5 +1,5 @@
 import "./wayve-email-form.css";
-import { sendContactForm } from "./send-contact-form";
+import { ContactSubmissionLimitError, sendContactForm } from "./send-contact-form";
 
 export default class WayveEmailForm extends HTMLElement {
   connectedCallback() {
@@ -45,8 +45,11 @@ export default class WayveEmailForm extends HTMLElement {
         form.reset();
         status.textContent = "Thanks — your message is in our inbox.";
         status.dataset.state = "success";
-      } catch {
-        status.textContent = "Something isn’t working. Please try again.";
+      } catch (error) {
+        status.textContent =
+          error instanceof ContactSubmissionLimitError
+            ? error.message
+            : "Something isn’t working. Please try again.";
         status.dataset.state = "error";
       } finally {
         button.disabled = false;

@@ -1,5 +1,5 @@
 import "./wayve-links.css";
-import { sendContactForm } from "../contact/send-contact-form";
+import { ContactSubmissionLimitError, sendContactForm } from "../contact/send-contact-form";
 import { APPLICATION_QUESTIONS } from "./application-questions";
 
 const defaultStatus = "We’ll use your email only to follow up about the team.";
@@ -95,8 +95,11 @@ export default class Links extends HTMLElement {
         form.reset();
         status.textContent = "Thanks — your answers are in our inbox.";
         status.dataset.state = "success";
-      } catch {
-        status.textContent = "Something isn’t working. Please try again.";
+      } catch (error) {
+        status.textContent =
+          error instanceof ContactSubmissionLimitError
+            ? error.message
+            : "Something isn’t working. Please try again.";
         status.dataset.state = "error";
       } finally {
         submit.disabled = false;
