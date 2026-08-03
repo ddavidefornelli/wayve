@@ -1,0 +1,12 @@
+wayve-title {
+  display: block;
+  line-height: 1;
+}
+
+.wayve-title {
+  display: block;
+  font-size: var(--wordmark-height);
+  font-weight: 800;
+  letter-spacing: -0.075em;
+  line-height: 1;
+}

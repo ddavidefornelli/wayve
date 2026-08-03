@@ -1,0 +1,158 @@
+wayve-email-form {
+  display: block;
+  max-width: 54rem;
+  margin: 3rem auto 0;
+  scroll-margin-top: 6rem;
+  text-align: left;
+}
+
+.email-form {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  background: var(--paper);
+  box-shadow: 0.5rem 0.5rem 0 var(--ink);
+}
+
+.email-form-honey {
+  display: none;
+}
+
+.email-form-fields {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+}
+
+.email-form label {
+  display: grid;
+  align-content: start;
+  gap: 0.6rem;
+}
+
+.email-form label > span {
+  color: var(--ink);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.email-form input,
+.email-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  outline: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font: inherit;
+}
+
+.email-form input {
+  min-height: 3.75rem;
+  padding: 0 1rem;
+}
+
+.email-form textarea {
+  min-height: 7.5rem;
+  padding: 1rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.email-form input::placeholder,
+.email-form textarea::placeholder {
+  color: var(--muted);
+}
+
+.email-form input:focus-visible,
+.email-form textarea:focus-visible {
+  border-color: var(--cyan);
+  outline: 2px solid var(--cyan);
+  outline-offset: 0.15rem;
+}
+
+.email-form-footer {
+  display: flex;
+  margin-top: 1.25rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.final-cta .email-form-footer p {
+  margin: 0;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.625rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.final-cta .email-form-status[data-state="success"] {
+  color: var(--accent);
+}
+
+.final-cta .email-form-status[data-state="error"] {
+  color: #a62929;
+}
+
+.email-form button {
+  display: inline-flex;
+  min-height: 3.75rem;
+  padding: 0.9rem 1.2rem;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid var(--accent);
+  border-radius: 0;
+  color: var(--white);
+  background: var(--accent);
+  box-shadow: 0.4rem 0.4rem 0 var(--ink);
+  cursor: pointer;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  transition:
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.email-form button:hover:not(:disabled) {
+  box-shadow: 0.15rem 0.15rem 0 var(--ink);
+  transform: translate(0.2rem, 0.2rem);
+}
+
+.email-form button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.email-form button:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 0.3rem;
+}
+
+.email-form button span {
+  font-size: 1rem;
+}
+
+@media (max-width: 44rem) {
+  .email-form-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .email-form-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .email-form button {
+    width: 100%;
+  }
+}

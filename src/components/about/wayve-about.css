@@ -1,0 +1,77 @@
+wayve-about {
+  display: block;
+}
+
+.about-content {
+  text-align: center;
+}
+
+.about-content h2,
+.about-content .section-lede {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.about-content .section-lede {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+}
+
+.team-grid {
+  display: grid;
+  margin-top: clamp(3rem, 6vw, 5rem);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.team-grid article {
+  min-height: 22rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border-right: 1px solid var(--line);
+}
+
+.team-grid article:last-child {
+  border-right: 0;
+}
+
+.member-role {
+  color: var(--accent);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.team-grid h3 {
+  margin-top: 1rem;
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  font-weight: 800;
+  letter-spacing: -0.07em;
+  line-height: 0.95;
+}
+
+.member-description {
+  max-width: 30rem;
+  margin: 2rem auto 0;
+  color: var(--ink-soft);
+  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+  line-height: 1.65;
+}
+
+@media (max-width: 46rem) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid article {
+    min-height: auto;
+    padding: 2rem 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .team-grid article:last-child {
+    border-bottom: 0;
+  }
+}

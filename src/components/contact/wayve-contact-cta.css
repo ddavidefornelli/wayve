@@ -1,0 +1,36 @@
+wayve-contact-cta {
+  display: inline-block;
+  justify-self: start;
+}
+
+wayve-contact-cta a {
+  display: inline-flex;
+  min-height: 3.75rem;
+  padding: 0.9rem 1.2rem;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid var(--accent);
+  color: var(--white);
+  background: var(--accent);
+  box-shadow: 0.4rem 0.4rem 0 var(--ink);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+wayve-contact-cta a:hover {
+  box-shadow: 0.15rem 0.15rem 0 var(--ink);
+  transform: translate(0.2rem, 0.2rem);
+}
+
+wayve-contact-cta a span {
+  font-size: 1rem;
+}

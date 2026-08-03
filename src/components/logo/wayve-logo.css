@@ -1,0 +1,26 @@
+wayve-logo {
+  display: block;
+  flex: 0 0 auto;
+  width: var(--wordmark-height);
+  height: var(--wordmark-height);
+  pointer-events: none;
+}
+
+wayve-logo .circles {
+  height: 100%;
+  mask-image: linear-gradient(135deg, #000 35%, rgba(0, 0, 0, 0.2) 82%);
+}
+
+wayve-logo .row {
+  display: flex;
+  height: calc(100% / 9);
+}
+
+wayve-logo .circle {
+  display: block;
+  width: calc(100% / 15);
+  height: 60%;
+  margin: calc(100% / 45);
+  border-radius: 50%;
+  background: var(--accent);
+}
