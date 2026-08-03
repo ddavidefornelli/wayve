@@ -30,7 +30,7 @@ export default class Links extends HTMLElement {
 
     this.innerHTML = `
       <button class="nav-banner" type="button" aria-haspopup="dialog" aria-controls="fit-dialog">
-        <span class="banner-badge">ONE SLOT LEFT</span>
+        <span class="banner-badge">TWO SLOTS LEFT</span>
         <span class="banner-message"><strong>Want to join our team?</strong> Find out if you are a fit</span>
         <span class="banner-arrow" aria-hidden="true">
           <svg viewBox="0 0 40 24" focusable="false">

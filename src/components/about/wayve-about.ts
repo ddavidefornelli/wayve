@@ -5,11 +5,18 @@ const team = [
     name: "David",
     role: "The builder",
     text: "Turns ideas into working products, from the first sketch to the final prototype.",
+    instagram: "davide.fornelli",
   },
   {
     name: "Cello",
     role: "The talker",
     text: "Turns complex ideas into clear stories and gets people excited about them.",
+    instagram: "_.ggiuliano._",
+  },
+  {
+    name: "???",
+    role: "The next member",
+    text: "Could this be you?",
   },
   {
     name: "???",
@@ -40,6 +47,7 @@ export default class WayveAbout extends HTMLElement {
         <p class="member-role">${member.role}</p>
         <h3>${member.name}</h3>
         <p class="member-description">${member.text}</p>
+        ${"instagram" in member ? `<a class="member-instagram" href="https://www.instagram.com/${member.instagram}/">@${member.instagram}</a>` : ""}
       `;
       grid?.append(article);
     }

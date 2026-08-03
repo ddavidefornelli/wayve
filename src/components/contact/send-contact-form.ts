@@ -1,4 +1,4 @@
-export const CONTACT_FORM_ENDPOINT = "https://formsubmit.co/ajax/contact.wayve1.0@gmail.com";
+export const CONTACT_FORM_ENDPOINT = "https://formsubmit.co/ajax/fornelli.dv@gmail.com";
 
 export async function sendContactForm(data: FormData, request: typeof fetch = fetch) {
   data.set("_replyto", String(data.get("email") ?? ""));
